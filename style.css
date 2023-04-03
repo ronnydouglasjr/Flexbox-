@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  background-color: #292929;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50px;
+  padding: 30px;
+}
+
+.logoNavBar {
+  width: 180px;
+}
+
+.headerBtnGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.navBtn {
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navBtn:hover {
+  border-bottom: 2px solid white;
+}
+
+.sectionTitle {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.sectionDescription {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.gridContainer{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "mainContent sidebarContent";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  grid-area: mainContent;
+
+}
+
+.categoryCard {
+  width: 280px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.8s;
+  cursor: pointer;
+  
+}
+
+.categoryCard:hover {
+  border: 2px solid black;
+}
+
+.mainCardImg {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+
+.sidebarCardImg {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: 0.7s;
+}
+
+.sidebarCardImg:hover{
+  border: 2px solid gainsboro;
+}
+
+.sidebarContent {
+  background-color: #383838;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: sidebarContent;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.sidebarCard {
+  width: 75%;
+}
+
+.sidebarCardTitle {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #292929;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50px;
+  padding: 30px;
+}
+
+.logoFooter {
+  width: 180px;
+}
+
+.footerAnchor {
+  color: white;
+  text-decoration: none;
+}
+
+@media(min-width: 1574px) and (max-width: 2560px) {
+
+  .mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .categoryCard {
+    width: 480px;
+    height: auto ;
+  }
+
+  .mainCardImg {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    padding-bottom: 20px ;
+  }
+
+  .mainCategoryCardTitle {
+    text-align: center;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 20px;
+  }
+
+  .mainCategoryCardDescription {
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+  }
+}
+
+
+@media (max-width: 630px) {
+  .gridContainer {
+    grid-template-areas:
+      "mainContent"
+      "sidebarContent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .sidebarContent {
+    min-width: auto;
+  }
+  .footerAnchor {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 463px){
+  .header {
+    justify-content: center;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
